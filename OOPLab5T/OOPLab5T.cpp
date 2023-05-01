@@ -74,7 +74,7 @@ class Person {
             cout << "Age " << a << " not allow, age is " << age << endl;;
         }
     }
-    string toString() {
+    toString() {
         string r,w,n ;
         a = to_string(age);
         w = to_string(weight);
@@ -126,3 +126,45 @@ int main(){
     return 0;
 }
 
+class Student
+{
+    protected string name;
+    protected int course;
+
+    public Student(string Name, int course)
+    {
+      this.Name = Name;
+      this.course = course;
+      this.gradeBook = gradeBook;
+    }
+
+    public string Name
+    {
+      get { return name; }
+      set { name = value; }
+    }
+
+    public int Course
+    {
+      get { return course; }
+      set { course = value; }
+    }
+    public void Print()
+    {
+      cout << "Name = " + this.name << endl;
+      cout << "Course = " + this.course << endl;
+    }
+  }
+
+  public class DiplomStdent : Student
+  {
+    protected string diplom; 
+
+    public DiplomStudent(string name, int course, string diplom) :
+    base(name, course)
+    {
+      base.name = name;
+      this.course = course; 
+      this.diplom = diplom; 
+    }
+  }
