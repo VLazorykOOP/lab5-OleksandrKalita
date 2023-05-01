@@ -115,6 +115,13 @@ public:
 }
 
 int main(){
+    Student studentFirst;
+    cout << studentFirst.toString() << endl;
+    studentFirst.setAge(16);
+    studentFirst.setClassNum(10);
+    Student studentSecond(16, 65, 'Petrov Denys Alegovich', 10);
+    studentSecond.toString();
+    studentSecond.~Student();
     
     return 0;
 }
