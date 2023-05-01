@@ -83,7 +83,39 @@ class Person {
     }
 }
 
-
+class Student : public Person {
+    int classNum;
+public:
+    Student () {
+        age = 0;
+        classNum = 1;
+        cout << " Default constructor Student() \n";
+    }
+    Student(int a, int c, string n) {
+        age = a;
+        classNum = c;
+        name = n;
+        cout << " Constructor PStudent(int a, int c, string n) \n";
+    }
+    ~Student(){
+        cout << "Destructor ~Student() \n";
+    }
+    void setAge(int a) {
+        if (a >= 0 && a <= 200){
+           age = a; 
+        }
+        else{
+            cout << "Age " << a << " not allow, age is " << age << endl;;
+        }
+    }
+    string toString() {
+        string r,a,n ;
+        a = to_string(age);
+        n = to_string(classNum);
+        r = name.toString() + " age: " + a + " classNumber: " + n;
+        return r;
+    }
+}
 
 int main(){
     
